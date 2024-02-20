@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/img/aldea1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70px;
+  height: 100%;
+  position: absolute;
+  left: 10px;
+}
+
+#contenedorNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 210px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(64, 62, 62, 0.5);
+  transition: 0.5s;
+}
+
+#contenedorNav:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+#contenedorNav a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contenedorNav a img {
+  width: 35px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+#contenedorNav a img:hover {
+  transform: scale(1.2);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+
+.contenedorThornSteel {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100%;
+}
+
+.vikingo {
+  width: 200px;
+  height: 200px;
+}
+
+.posicionPresentacion {
+  position: absolute;
+  left: 22%;
+  bottom: 45%;
+}
+
+
+.posicionInputs {
+  position: absolute;
+  right: 17%;
+  bottom: 40%;
+  opacity: 0;
+  transition: .5s;
+}
+
+.contenedorTexto {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+.posicionInputs .contenedorTexto input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+}
+
+.globo {
+  border-radius: 25px;
+  padding: 12px;
+  background: white;
+  color: black;
+  padding: 10px;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  z-index: 1;
+}
+.globo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  background: transparent;
+  width: 0px;
+  height: 0px;
+  border-bottom: 40px solid white;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  transform: rotate(30deg);
+  z-index: -1;
+}
+
+#boton{
+  transform: rotate(90deg);
+  
+}
+
+.contenedorBoton{
+  display: flex;
+  justify-content: end;
+}
