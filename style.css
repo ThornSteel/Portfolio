@@ -109,6 +109,12 @@ main {
   font-size: 18px;
 }
 
+#contenedorPlacer {
+  display: none;
+  margin-top: 150px;
+  
+}
+
 .globo {
   border-radius: 25px;
   padding: 12px;

@@ -13,13 +13,12 @@ function mostrarFrasesConocer(selector1, contenedorPersona, botonSelector) {
   let primeroMostrado = true;
   let contenedorMostrado = false;
 
- 
- let botonSiguiente = document.querySelector("#siguiente");
- 
- let boton = document.querySelector(botonSelector).addEventListener("click", function () {
-   primeroMostrado = false;
-   contenedor.style.opacity = "1";
-   
+  let botonSiguiente = document.querySelector("#siguiente");
+
+  let boton = document.querySelector(botonSelector).addEventListener("click", function () {
+    primeroMostrado = false;
+    contenedor.style.opacity = "1";
+
     let btnDesaparecer = document.querySelector(botonSelector);
     btnDesaparecer.style.display = "none";
 
@@ -33,14 +32,20 @@ function mostrarFrasesConocer(selector1, contenedorPersona, botonSelector) {
         let nombre = document.querySelector("#nombre").value;
         let razon = document.querySelector("#razon").value;
         let nacionalidad = document.querySelector("#nacionalidad").value;
+        let placer = document.querySelector("#contenedorPlacer");
+        let informacionPersonaLs;
 
         if (nombre === "" || razon === "" || nacionalidad === "") {
-          alert("Por favor complete los campos")
+          alert("Por favor complete los campos");
         } else {
           let informacionPersona = new Persona(nombre, razon, nacionalidad);
           localStorage.setItem("InformacionPersona", JSON.stringify(informacionPersona));
-          let informacionPersonaLs = JSON.parse(localStorage.getItem("InformacionPersona"));
+          informacionPersonaLs = JSON.parse(localStorage.getItem("InformacionPersona"));
+
+          alert("");
         }
+        placer.style.display = "block";
+        placer.innerHTML = "es un placer conocerte " + informacionPersonaLs.nombrePersona;
       }
     }
   });
