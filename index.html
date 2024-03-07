@@ -10,52 +10,91 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://kit.fontawesome.com/e8ba977198.js" crossorigin="anonymous"></script>
     <title>MiPortfolio</title>
   </head>
   <body>
     <nav>
-      <div id="contenedorNav">
-        <a href="#"><img src="img/git.png" alt="Github" /></a>
-        <a href="#"><img src="img/in.png" alt="Linkedin" /></a>
-        <a href="#"><img src="img/email.png" alt="Email" /></a>
-        <a href="#"><img src="img/wsp.png" alt="WhatApp" /></a>
+      <div id="contenedorNav" class="widget-list">
+        <a class="widget" href="#"><img src="img/git.png" alt="Github" /></a>
+        <a class="widget" href="#"><img src="img/in.png" alt="Linkedin" /></a>
+        <a class="widget" href="#"><img src="img/email.png" alt="Email" /></a>
+        <a class="widget" href="#"><img src="img/wsp.png" alt="WhatApp" /></a>
       </div>
     </nav>
 
     <main>
-      <div class="contenedorThornSteel">
-        <img src="/img/vikingo.png" class="vikingo" alt="ThornSteel" />
-      </div>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <div id="boxInicio" class="box">
+            <div id="contenedorPresentacion" class="posicionPresentacion">
+              <div id="primero" class="globo">
+                <p>¡Hola! ¿Cómo estás?</p>
+                <p>Antes de empezar me gustaria conocerte un poco mejor</p>
+                <div class="contenedorBoton">
+                  <i id="boton" class="fa-solid fa-arrow-turn-up"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contenedorThornSteel">
+              <img src="/img/vikingo.png" class="vikingo" alt="ThornSteel" />
+            </div>
+            <div id="inputsPersona" class="posicionInputs">
+              <div class="contenedorTexto">
+                <input type="text" id="nombre" placeholder="Tu nombre" />
+              </div>
+              <div class="contenedorTexto">
+                <input type="text" id="razon" placeholder="Razon de visita" />
+              </div>
+              <div class="contenedorTexto">
+                <input type="text" id="nacionalidad" placeholder="¿De donde sos?" />
+              </div>
 
-      <div id="contenedorPresentacion" class="posicionPresentacion">
-        <div id="primero" class="globo">
-          <p>¡Hola! ¿Cómo estás?</p>
-          <p>Antes de empezar me gustaria conocerte un poco mejor</p>
-          <div class="contenedorBoton">
-            <i id="boton" class="fa-solid fa-arrow-turn-up"></i>
+              <a href="#boxPresentacion" id="siguiente">Siguiente</a>
+            </div>
           </div>
-        </div>
+          <div id="boxPresentacion" class="box">
+            <div class="contenedorHojaDatos">
+              <div class="contenedorDatosMartin cajaDatos">
+                <div class="contenedorFotoMartin">
+                  <img src="img/aldea1.jpg" alt="" class="fotoMartin" />
+                </div>
+                <ul class="datosMartin">
+                  <li>Martin San Martin</li>
+                  <li>Progranador full stack</li>
+                </ul>
+              </div>
+              <div class="contenedorImagenSeparador">
+                <img src="img/ADNBUENO.png" alt="fotoADNSeparador" class="imagenSeparador" />
+              </div>
+              <div class="contenedorResumen cajaDatos">
+                <div class="contenedorTituloParrafo">
+                  <h2 class="tituloaResumen" style="font-size: 18px">Este soy yo</h2>
+                  <p class="parrafoResumen">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum tenetur fugit consectetur reiciendis natus aut quo hic voluptate error. Eos, labore aut omnis ipsum cum explicabo eum
+                    eveniet obcaecati quaerat!
+                  </p>
+                  <div>
+                    <h3 class="tituloTecnologias">Estas son las tecnologias que manejo</h3>
+                  </div>
+                </div>
+                <div class="contenedorTecnologias">
+                </div>
+              <div>
 
+              <a href="#boxContacto" id="siguiente" class="siguienteBTN" >Siguiente</a>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div id="boxContacto" class="box"></div>
+        </div>
       </div>
 
-      <div id="inputsPersona" class="posicionInputs">
-        <div class="contenedorTexto">
-          <input type="text" id="nombre" placeholder="Tu nombre" />
-        </div>
-        <div class="contenedorTexto">
-          <input type="text" id="razon" placeholder="Tu razon de estar aqui" />
-        </div>
-        <div class="contenedorTexto">
-          <input type="text" id="nacionalidad" placeholder="¿De donde sos?" />
-        </div>
-        
-        <button id="siguiente">Siguiente</button>
-      </div>
-         <div id="contenedorPlacer" class="contenedorTexto">
-          <p id="placer"></p>
-        </div> 
     </main>
+
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -60,10 +60,50 @@ nav {
 
 main {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 80%;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.slider-wrapper {
+  height: 70%;
+  width: 75%;
+  max-width: 800px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider {
+  width: 100%;
   height: 100%;
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 .25rem 35rem #21212126;
+  border-radius: .5rem;
+
+}
+
+.slider .box {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+}
+
+#boxInicio {
+  background-color: rgba(115, 112, 112, 0.683);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+
+
+#boxContacto {
+  background-color: blue;
 }
 
 .contenedorThornSteel {
@@ -78,17 +118,8 @@ main {
   height: 200px;
 }
 
-.posicionPresentacion {
-  position: absolute;
-  left: 22%;
-  bottom: 45%;
-}
-
-
 .posicionInputs {
-  position: absolute;
-  right: 17%;
-  bottom: 40%;
+
   opacity: 0;
   transition: .5s;
 }
@@ -106,13 +137,16 @@ main {
   outline: none;
   width: 100%;
   height: 100%;
-  font-size: 18px;
+  font-size: 14px;
 }
 
-#contenedorPlacer {
-  display: none;
-  margin-top: 150px;
-  
+.posicionInputs button {
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: skyblue;
+  padding: 5px 10px;
+  font-size: 14px;
 }
 
 .globo {
@@ -140,6 +174,12 @@ main {
   border-left: 40px solid transparent;
   transform: rotate(30deg);
   z-index: -1;
+ 
+}
+
+.globo p {
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
 #boton{
@@ -150,4 +190,135 @@ main {
 .contenedorBoton{
   display: flex;
   justify-content: end;
+}
+/* extension */
+html.sr .widget {
+  visibility: hidden;
+}
+
+.contenedorHojaDatos {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.cajaDatos {
+  width: 40%;
+}
+
+.contenedorDatosMartin {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  gap: 20px;
+}
+
+.contenedorDatosMartin .contenedorFotoMartin{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  
+}
+
+.contenedorDatosMartin .contenedorFotoMartin .fotoMartin {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.contenedorDatosMartin ul{
+  font-family: 'Nordic Chance', sans-serif;
+ list-style: none;
+ height: 80px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+}
+.contenedorDatosMartin ul li{
+ width: 100%;
+ text-align: center;
+}
+
+.contenedorImagenSeparador {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+}
+
+.contenedorResumen {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.contenedorResumen .contenedorTituloParrafo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedorResumen .contenedorTituloParrafo .tituloResumen {
+  margin: 30px ;
+  font-size: 16px ;
+}
+.contenedorResumen .contenedorTituloParrafo .parrafoResumen {
+  margin: 0px 30px 30px 30px;
+ font-size: 10px;
+}
+.tituloTecnologias {
+  text-align: center;
+  font-size: 16px;
+}
+
+.contenedorTecnologias {
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  gap: 6px;
+}
+
+.contenedorTarjetaTecnologias {
+  display: flex;
+  width: 40px;
+  height: 60px;
+  border: 1px solid goldenrod;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  margin-bottom: 5px;
+}
+
+.contenedorTarjetaTecnologias:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 10px 5px rgba(155, 60, 8, 0.5);
+}
+
+.contenedorImgTecnologias {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedorImgTecnologias img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.contenedorDescripcion {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 8px;
 }
